@@ -39,8 +39,8 @@ header::before {
 }
 
 main #creations .creations .creation::before  {
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
 }
 
 /* header and footer styling */
@@ -200,23 +200,41 @@ main #creations .creations {
 
 main #creations .creations .creation {
     position: relative;
-    color: #fff;
 }
 
-main #creations .creations .creation img {
-    width: 180px;
+main #creations .creation img {
+    opacity: 1;
+    display: block; 
+    width: 100%;
+    height: auto; 
+    transition: 0.5s ease; 
 }
 
-main #creations .creations .creation:hover {
-    cursor: pointer;
-    opacity: 0.3;
-}
-
-main #creations .creations .creation p {
+main #creations .creation .bottom-right {
     width: 100px;
     position: absolute; 
     bottom: 20px;
     left: 20px; 
     font-size: 1.2rem;
     text-transform: uppercase;
+}
+
+main #creations .creation .bottom-right .text {
+    color: #fff;
+}
+
+main #creations .creation:hover {
+    cursor: pointer;
+}
+
+main #creations .creation:hover img {
+    opacity: 0.3;
+}
+
+main #creations .creation:hover .bottom-right {
+    opacity: 1;
+}
+
+main #creations .creation:hover .text {
+    color: black; 
 }
