@@ -1,0 +1,30 @@
+.container {
+    width: 600px;
+}
+
+main #introduction, 
+main #creations,
+footer {
+    margin-top: 80px;
+}
+
+main #introduction img {
+    width: 300px;
+}
+
+main #introduction .introduction-content {
+    width: 380px;
+    padding: 20px 0 0 20px;
+    line-height: 1.1rem;
+}
+
+main #introduction .introduction-content h2,
+main #creations .heading h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+}
+
+main #creations .creations {
+    grid-template-columns: repeat(3, 1fr);
+}

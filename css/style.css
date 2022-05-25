@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+/* main styling */
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+}
+
+header .navbar,
+footer,
+header .navbar nav ul,
+footer .logo-and-nav .navbar nav ul,
+footer .socialmedia-and-copyright,
+main #creations .heading {
+    display: flex;
+}
+
+/* overlays for header and creations */
+
+header::before, 
+main #creations .creations .creation::before {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background: rgb(0, 0, 0, 0.3);
+}
+
+header::before {
+    width: 100%;
+    height: 55vh;
+}
+
+main #creations .creations .creation::before  {
+    width: 100%;
+    height: 100%;
+}
+
+/* header and footer styling */
+
+header,
+footer {
+    padding: 30px 80px;
+    color: #fff;
+}
+
+header {
+    height: 55vh;
+    background: url('../img/image-hero.jpg') no-repeat center center/cover;
+}
+
+footer {
+    background-color: black;
+}
+
+header .navbar,
+footer {
+    position: relative;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
+}
+
+footer .logo-and-nav .navbar nav {
+    margin-top: 10px;
+    font-size: 0.7rem;
+}
+
+header .navbar nav ul li,
+footer .logo-and-nav .navbar nav ul li  {
+    list-style-type: none;
+}
+
+header .navbar nav ul li {
+    margin-left: 20px;
+}
+
+footer .logo-and-nav .navbar nav ul li {
+    margin-right: 20px;
+}
+
+header .navbar nav ul li a,
+footer .logo-and-nav .navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .navbar nav ul li a:hover,
+footer .logo-and-nav .navbar nav ul li a:hover,
+footer .socialmedia-and-copyright .socialmedia a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+header .navbar nav .hamburger {
+    display: none; 
+    cursor: pointer;
+}
+
+header .navbar nav .hamburger .bar {
+    display: block; 
+    width: 25px;
+    height: 3px; 
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+header .content {
+    width: 430px;
+    position: relative;
+}
+
+header .content h1 {
+    padding: 15px;
+    margin-top: 70px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    border: 1px solid #fff;
+}
+
+footer .socialmedia-and-copyright {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .socialmedia-and-copyright .socialmedia a {
+    margin-left: 8px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+footer .socialmedia-and-copyright p {
+    margin-top: 10px;
+    opacity: 0.5;
+    font-size: 0.5rem;
+}
+
+/* styling for the main part */
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+}
+
+main #introduction, 
+main #creations,
+footer {
+    margin-top: 100px;
+}
+
+main #introduction {
+    position: relative;
+}
+
+main #introduction img {
+    width: 450px;
+}
+
+main #introduction .introduction-content {
+    width: 450px;
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    padding: 45px 0 0 45px;
+    line-height: 1.3rem;
+    background-color: #fff;
+}
+
+main #introduction .introduction-content h2,
+main #creations .heading h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+
+main #creations .heading {
+    justify-content: space-between;
+}
+
+main #creations .heading button {
+    cursor: pointer;
+    height: 50%;
+    padding: 8px 20px; 
+    font-family: inherit;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+main #creations .heading button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+main #creations .creations {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+main #creations .creations .creation {
+    position: relative;
+}
+
+main #creations .creation img {
+    opacity: 1;
+    display: block; 
+    width: 100%;
+    height: auto; 
+    transition: 0.5s ease; 
+}
+
+main #creations .creation .bottom-right {
+    width: 100px;
+    position: absolute; 
+    bottom: 20px;
+    left: 20px; 
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+main #creations .creation .bottom-right .text {
+    color: #fff;
+}
+
+main #creations .creation:hover {
+    cursor: pointer;
+}
+
+main #creations .creation:hover img {
+    opacity: 0.3;
+}
+
+main #creations .creation:hover .bottom-right {
+    opacity: 1;
+}
+
+main #creations .creation:hover .text {
+    color: black; 
+}
