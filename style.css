@@ -99,10 +99,24 @@ footer .socialmedia-and-copyright .socialmedia a:hover {
     border-bottom: 2px solid #fff;
 }
 
+header .navbar nav .hamburger {
+    display: none; 
+    cursor: pointer;
+}
+
+header .navbar nav .hamburger .bar {
+    display: block; 
+    width: 25px;
+    height: 3px; 
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
 header .content {
     width: 430px;
     position: relative;
-    z-index: 1;
 }
 
 header .content h1 {
@@ -287,6 +301,44 @@ main #creations .creation:hover .text {
         height: 45vh;
     }
 
+    header .navbar nav .hamburger {
+        display: block;
+    }
+
+    header .navbar nav .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    header .navbar nav .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header .navbar nav .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header .navbar nav ul {
+        position: fixed;
+        left: -100%; 
+        top: 80px;
+        gap: 10px;
+        padding: 20px 0 20px 60px;
+        flex-direction: column;
+        background-color: black;
+        color: #fff;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    header .navbar nav ul li a {
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+    }
+
+    header .navbar nav ul.active {
+        left: 0; 
+    }
+
     .container {
         width: 400px;
     }
@@ -328,7 +380,6 @@ main #creations .creation:hover .text {
         grid-gap: 1rem;
     }
 
-    header .navbar,
     footer {
         flex-direction: column;
         text-align: center;
