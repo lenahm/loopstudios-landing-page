@@ -22,7 +22,7 @@ main #creations .heading {
     display: flex;
 }
 
-/* overlays for header and creations */
+/* overlays for header */
 
 header::before, 
 main #creations .creations .creation::before {
@@ -74,12 +74,12 @@ footer .logo-and-nav .navbar nav {
     font-size: 0.7rem;
 }
 
-header .navbar nav ul li,
+header .navbar nav .nav-menu .nav-item,
 footer .logo-and-nav .navbar nav ul li  {
     list-style-type: none;
 }
 
-header .navbar nav ul li {
+header .navbar nav .nav-menu .nav-item {
     margin-left: 20px;
 }
 
@@ -87,13 +87,13 @@ footer .logo-and-nav .navbar nav ul li {
     margin-right: 20px;
 }
 
-header .navbar nav ul li a,
+header .navbar nav .nav-menu .nav-item .nav-link,
 footer .logo-and-nav .navbar nav ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-header .navbar nav ul li a:hover,
+header .navbar nav .nav-menu .nav-item .nav-link:hover,
 footer .logo-and-nav .navbar nav ul li a:hover,
 footer .socialmedia-and-copyright .socialmedia a:hover {
     border-bottom: 2px solid #fff;
@@ -211,6 +211,8 @@ main #creations .creations {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5rem;
 }
+
+/* image overlay with hover-effect */
 
 main #creations .creations .creation {
     position: relative;
